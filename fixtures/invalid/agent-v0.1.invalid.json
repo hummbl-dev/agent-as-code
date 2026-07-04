@@ -5,6 +5,11 @@
     "id": "agent-as-code/reviewer-v1",
     "title": "Invalid reviewer",
     "version": 0,
+    "role": "reviewer",
+    "permissions": [
+      "read",
+      "comment"
+    ],
     "scope": "agent-workflow"
   },
   "authority": {
@@ -20,5 +25,10 @@
   ],
   "handoff": {
     "requiresReceipt": true
+  },
+  "receiptRequirements": {
+    "review": "required",
+    "runtime": "agent-execution.receipt.v0.1",
+    "handoff": "handoff-receipt.v0.1"
   }
 }

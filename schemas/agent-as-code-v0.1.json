@@ -27,6 +27,8 @@
         "id",
         "title",
         "version",
+        "role",
+        "permissions",
         "scope"
       ],
       "properties": {
@@ -40,6 +42,27 @@
         "version": {
           "type": "integer",
           "minimum": 1
+        },
+        "role": {
+          "type": "string",
+          "enum": ["reviewer", "operator", "researcher", "coordinator", "human"]
+        },
+        "permissions": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "enum": [
+              "read",
+              "comment",
+              "propose",
+              "edit-docs",
+              "run-checks",
+              "open-pr",
+              "handoff"
+            ]
+          }
         },
         "scope": {
           "type": "string"

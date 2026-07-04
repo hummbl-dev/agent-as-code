@@ -5,6 +5,12 @@
     "id": "agent-as-code/reviewer-v1",
     "title": "First-pass agent reviewer",
     "version": 1,
+    "role": "reviewer",
+    "permissions": [
+      "read",
+      "comment",
+      "propose"
+    ],
     "scope": "agent-workflow"
   },
   "authority": {
