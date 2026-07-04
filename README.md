@@ -22,4 +22,14 @@
 
 ## Status
 
-Early public seed repository.
+- packet-status: `seed` -> `v0.1-draft`
+
+Public repo. Early public seed repository.
+
+## v0.1 packet locations
+
+- Boundary: [`docs/v0.1-boundary.md`](docs/v0.1-boundary.md)
+- Schema: [`schemas/agent-as-code-v0.1.json`](schemas/agent-as-code-v0.1.json)
+- Example: [`examples/agent-v0.1.example.json`](examples/agent-v0.1.example.json)
+- Fixtures: [`fixtures/valid/agent-v0.1.valid.json`](fixtures/valid/agent-v0.1.valid.json), [`fixtures/invalid/agent-v0.1.invalid.json`](fixtures/invalid/agent-v0.1.invalid.json)
+- Receipt: [`receipts/agent-as-code-v0.1-packet-receipt.md`](receipts/agent-as-code-v0.1-packet-receipt.md)
