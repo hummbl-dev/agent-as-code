@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "v0.1",
+  "packetStatus": "validated-example",
+  "agentManifest": {
+    "id": "agent-as-code/reviewer-v1",
+    "title": "First-pass agent reviewer",
+    "version": 1,
+    "scope": "agent-workflow"
+  },
+  "authority": {
+    "owner": "agent-as-code",
+    "canActOnBehalfOf": [
+      "engineering_team"
+    ]
+  },
+  "tools": [
+    {
+      "name": "analysis",
+      "kind": "tool",
+      "scope": "workspace"
+    }
+  ],
+  "handoff": {
+    "requiresReceipt": true,
+    "escalationTriggers": [
+      "policy-blocked",
+      "security-risk"
+    ]
+  },
+  "receiptRequirements": {
+    "review": "required",
+    "runtime": "agent-execution.receipt.v0.1",
+    "handoff": "handoff-receipt.v0.1"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "v0.1",
+  "packetStatus": "v0.1-draft",
+  "agentManifest": {
+    "id": "agent-as-code/reviewer-v1",
+    "title": "First-pass agent reviewer",
+    "version": 1,
+    "scope": "agent-workflow",
+    "description": "A constrained reviewer agent for repository packet intake."
+  },
+  "authority": {
+    "owner": "agent-as-code",
+    "canActOnBehalfOf": [
+      "engineering_team",
+      "founder_team"
+    ]
+  },
+  "tools": [
+    {
+      "name": "analysis",
+      "kind": "tool",
+      "scope": "workspace",
+      "timeoutSeconds": 30
+    }
+  ],
+  "handoff": {
+    "requiresReceipt": true,
+    "escalationTriggers": [
+      "approval-required",
+      "policy-blocked",
+      "security-risk"
+    ]
+  },
+  "receiptRequirements": {
+    "review": "required",
+    "runtime": "agent-execution.receipt.v0.1",
+    "handoff": "handoff-receipt.v0.1"
+  },
+  "adjacentRepos": [
+    "governance-as-code",
+    "policy-as-code",
+    "security-as-code",
+    "model-routing-as-code",
+    "observability-as-code"
+  ]
+}

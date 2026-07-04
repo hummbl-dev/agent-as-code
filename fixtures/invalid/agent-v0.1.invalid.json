@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "v0.1",
+  "packetStatus": "validated-example",
+  "agentManifest": {
+    "id": "agent-as-code/reviewer-v1",
+    "title": "Invalid reviewer",
+    "version": 0,
+    "scope": "agent-workflow"
+  },
+  "authority": {
+    "owner": "agent-as-code",
+    "canActOnBehalfOf": []
+  },
+  "tools": [
+    {
+      "name": "analysis",
+      "kind": "tool",
+      "scope": "workspace"
+    }
+  ],
+  "handoff": {
+    "requiresReceipt": true
+  }
+}
